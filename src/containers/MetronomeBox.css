@@ -1,6 +1,22 @@
+#metronome-box{
+  border: 1px solid black;
+  width: 75%;
+  margin:0 auto;
+  font-family: ‘Metrophobic’, sans-serif;
+  background-color: #E9ECEB;
+}
+
+#metronome-box h1{
+  font-size: 50px;
+}
+
+#metronome-box p{
+  font-size: 30px;
+}
+
 #play-button, #hannah-button {
   padding: 15px;
-  width: 150px;
+  width: 250px;
   margin: 15px;
 }
 
@@ -12,13 +28,12 @@
 #hannah-button {
   background-color: #CC2E2E;
   font-size: 20px;
-  font-family: system-ui;
   color: white;
 }
 
 #play-button:hover, #hannah-button:hover {
   padding: 11px;
-  width: 150px;
+  width: 250px;
   margin: 15px;
   font-size: 20px;
   cursor: pointer;

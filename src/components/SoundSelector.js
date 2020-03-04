@@ -10,8 +10,7 @@ function SoundSelector(props){
 
   return(
     <select defaultValue="default" onChange={handleChange}>
-      <option disabled value="default">Choose a sound...</option>
-      <option value="/sounds/countdown.mp3">Countdown</option>
+      <option disabled value="default">Choose a Sound!</option>
       <option value="/sounds/tick.wav">Tick</option>
       <option value="/sounds/dog.mp3">Dog</option>
       <option value="/sounds/monstermunch.mp3">Monster Munch</option>

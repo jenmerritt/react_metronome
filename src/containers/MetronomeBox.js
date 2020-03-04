@@ -11,7 +11,8 @@ class MetronomeBox extends Component{
     this.state = {
       speed: 200,
       sound: new Audio('/sounds/tick.wav'),
-      myTimer: null
+      myTimer: null,
+      isPlaying: false
     }
     this.playSound = this.playSound.bind(this)
     this.loopAudio = this.loopAudio.bind(this)
@@ -36,13 +37,19 @@ class MetronomeBox extends Component{
   }
 
   loopAudio(){
+    if(!this.state.isPlaying){
       this.setState({
-        myTimer: setInterval(this.playSound, this.state.speed)
+        myTimer: setInterval(this.playSound, this.state.speed),
+        isPlaying: true
         });
+      }
   }
 
   clearAudio(){
     clearInterval(this.state.myTimer)
+    this.setState({
+      isPlaying: false
+      });
   }
 
   playSound(){
@@ -59,13 +66,13 @@ class MetronomeBox extends Component{
 
     return(
 
-      <section>
+      <section id="metronome-box">
         <h1>Metronome</h1>
         <p>BPM: {parseFloat(60000/this.state.speed).toFixed(0)}</p>
         <button id="play-button" onClick={this.loopAudio}>▶️</button>
         <button id="hannah-button" onClick={this.clearAudio}>HANNAH!</button>
-        <SpeedSelector speed={this.state.speed}  onSpeedSelected={this.handleSpeedSelected}/>
         <SoundSelector sound={this.state.sound}  onSoundSelected={this.handleSoundSelected}/>
+        <SpeedSelector speed={this.state.speed}  onSpeedSelected={this.handleSpeedSelected}/>
         <div id="countdown" onClick={this.playCountdown}></div>
       </section>
     )

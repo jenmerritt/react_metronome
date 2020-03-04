@@ -9,7 +9,7 @@ function SpeedSelector(props){
 
   return(
     <section>
-    <input id="reversedRange" type="range" min="200" max="1000" onChange={handleChange}/>
+    <input className="slider" id="reversedRange" type="range" min="200" max="1000" onChange={handleChange}/>
 
 
     </section>

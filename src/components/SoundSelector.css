@@ -1,3 +1,10 @@
 select {
   margin-bottom: 60px;
+  background-color: #6699FF;
+  color: white;
+  font-size: 50px;
+  padding: 20px;
+  width: 70%;
+  text-align: center;
+  margin-top: 50px;
 }
