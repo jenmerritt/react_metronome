@@ -1,5 +1,5 @@
 import React from 'react';
-
+import './SpeedSelector.css'
 function SpeedSelector(props){
 
   function handleChange(event){
@@ -9,7 +9,7 @@ function SpeedSelector(props){
 
   return(
     <section>
-    <input type="range" min="200" max="1000" step="50" onChange={handleChange}/>
+    <input id="reversedRange" type="range" min="200" max="1000" onChange={handleChange}/>
 
 
     </section>

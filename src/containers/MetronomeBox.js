@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import SpeedSelector from '../components/SpeedSelector'
 import SoundSelector from '../components/SoundSelector'
+import './MetronomeBox.css'
+
 
 class MetronomeBox extends Component{
 
@@ -16,6 +18,7 @@ class MetronomeBox extends Component{
     this.clearAudio = this.clearAudio.bind(this)
     this.handleSpeedSelected = this.handleSpeedSelected.bind(this)
     this.handleSoundSelected = this.handleSoundSelected.bind(this)
+    this.playCountdown = this.playCountdown.bind(this)
   }
 
   handleSpeedSelected(newSpeed){
@@ -43,8 +46,13 @@ class MetronomeBox extends Component{
   }
 
   playSound(){
-    const audioFile = new Audio(this.state.sound)
+    // const audioFile = new Audio(this.state.sound)
     this.state.sound.play()
+  }
+
+  playCountdown(){
+    this.setState({sound: new Audio('/sounds/countdown.mp3')})
+    this.loopAudio()
   }
 
   render(){
@@ -53,11 +61,12 @@ class MetronomeBox extends Component{
 
       <section>
         <h1>Metronome</h1>
-        <p>Speed: {this.state.speed}</p>
-        <button onClick={this.loopAudio}>PLAY!</button>
-        <button onClick={this.clearAudio}>HANNAH!</button>
+        <p>BPM: {parseFloat(60000/this.state.speed).toFixed(0)}</p>
+        <button id="play-button" onClick={this.loopAudio}>▶️</button>
+        <button id="hannah-button" onClick={this.clearAudio}>HANNAH!</button>
         <SpeedSelector speed={this.state.speed}  onSpeedSelected={this.handleSpeedSelected}/>
         <SoundSelector sound={this.state.sound}  onSoundSelected={this.handleSoundSelected}/>
+        <div id="countdown" onClick={this.playCountdown}></div>
       </section>
     )
   }

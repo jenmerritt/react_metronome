@@ -1,0 +1,41 @@
+#play-button, #hannah-button {
+  padding: 15px;
+  width: 150px;
+  margin: 15px;
+}
+
+#play-button {
+  background-color: #5CB259;
+  font-size: 20px;
+}
+
+#hannah-button {
+  background-color: #CC2E2E;
+  font-size: 20px;
+  font-family: system-ui;
+  color: white;
+}
+
+#play-button:hover, #hannah-button:hover {
+  padding: 11px;
+  width: 150px;
+  margin: 15px;
+  font-size: 20px;
+  cursor: pointer;
+  border: 2px solid black;
+}
+
+#countdown:hover {
+background-image: url('/countdown.jpg');
+background-size: contain;
+background-repeat: no-repeat;
+width: 300px;
+height: 300px;
+margin: 0 auto;
+}
+
+#countdown {
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+}
