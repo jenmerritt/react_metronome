@@ -9,10 +9,16 @@ class MetronomeBox extends Component{
     this.state = {
       speed: 40,
       sound: {
-        title: "chicken",
-        file: 'blah.mp3'
+        title: "tick",
+        filePath: '/sounds/tick.wav'
       }
     }
+    this.playSound = this.playSound.bind(this)
+  }
+
+  playSound(){
+    const audioFile = new Audio(this.state.sound.filePath)
+    audioFile.play();
   }
 
   render(){
@@ -21,6 +27,7 @@ class MetronomeBox extends Component{
         <h1>Metronome</h1>
         <p>Speed: {this.state.speed}</p>
         <p>Sound: {this.state.sound.title}</p>
+        <button onClick={this.playSound}>PLAY!</button>
         <SpeedSelector speed={this.state.speed} />
         <SoundSelector sound={this.state.sound} />
       </section>
