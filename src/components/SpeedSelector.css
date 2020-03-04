@@ -4,11 +4,12 @@ input[type=range]{
   margin-bottom: 50px;
 }
 
+/* SLIDER */
 
 .slider {
   -webkit-appearance: none;
   width: 100%;
-  height: 25px;
+  height: 95px;
   background: #ffffff;
   outline: none;
   opacity: 0.7;
@@ -20,44 +21,200 @@ input[type=range]{
   opacity: 1;
 }
 
-.dog-slider::-webkit-slider-thumb{
-  /* background: url('/favicon.ico');
-  background-size: contain; */
-  background: red;
-}
-
-.cat-slider::-webkit-slider-thumb{
-  /* background: url('/favicon.ico');
-  background-size: contain; */
-  background: blue;
-}
-
-.jelly-slider::-webkit-slider-thumb{
-  /* background: url('/favicon.ico');
-  background-size: contain; */
-  background: yellow;
-}
-
-.monstermunch-slider::-webkit-slider-thumb{
-  /* background: url('/favicon.ico');
-  background-size: contain; */
-  background: brown;
-}
-
 .slider::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
-  width: 25px;
-  height: 25px;
-  /* background: #6699FF; */
+  width: 95px;
+  height: 95px;
+  background: #6699FF;
   background: url('/favicon.ico');
   background-size: contain;
   cursor: pointer;
 }
 
 .slider::-moz-range-thumb {
-  width: 25px;
-  height: 25px;
+  width: 95px;
+  height: 95px;
   background: #4CAF50;
+  cursor: pointer;
+}
+
+
+/* MONSTER MUNCH */
+
+.monstermunch {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 95px;
+  background: #ffffff;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.monstermunch:hover {
+  opacity: 1;
+}
+
+.monstermunch::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 95px;
+  height: 95px;
+  background: url('/monstermunch.png');
+  background-size: contain;
+  cursor: pointer;
+}
+
+.monstermunch::-moz-range-thumb {
+  width: 95px;
+  height: 95px;
+  background: url('/jelly.png');
+  cursor: pointer;
+}
+
+/* JELLY */
+
+.jelly {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 95px;
+  background: #ffffff;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.jelly:hover {
+  opacity: 1;
+}
+
+.jelly::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 95px;
+  height: 95px;
+  background: url('/jelly.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.jelly::-moz-range-thumb {
+  width: 95px;
+  height: 95px;
+  background: url('/jelly.png');
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+
+/* TICK */
+
+.tick {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 95px;
+  background: #ffffff;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.tick:hover {
+  opacity: 1;
+}
+
+.tick::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 95px;
+  height: 95px;
+  background: url('/tick.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.tick::-moz-range-thumb {
+  width: 95px;
+  height: 95px;
+  background: url('/tick.png');
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+/* DOG */
+
+.dog {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 95px;
+  background: #ffffff;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.dog:hover {
+  opacity: 1;
+}
+
+.dog::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 95px;
+  height: 95px;
+  background: url('/dog.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.dog::-moz-range-thumb {
+  width: 95px;
+  height: 95px;
+  background: url('/dog.png');
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+/* MEOW */
+
+.meow {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 95px;
+  background: #ffffff;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.meow:hover {
+  opacity: 1;
+}
+
+.meow::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 95px;
+  height: 95px;
+  background: url('/meow.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.meow::-moz-range-thumb {
+  width: 95px;
+  height: 95px;
+  background: url('/meow.png');
+  background-repeat: no-repeat;
   cursor: pointer;
 }

@@ -12,7 +12,8 @@ class MetronomeBox extends Component{
       speed: 200,
       sound: new Audio('/sounds/tick.wav'),
       myTimer: null,
-      isPlaying: false
+      isPlaying: false,
+      sliderIcon: "slider"
     }
     this.playSound = this.playSound.bind(this)
     this.loopAudio = this.loopAudio.bind(this)
@@ -34,6 +35,21 @@ class MetronomeBox extends Component{
     this.setState({
       sound: new Audio(newSound)
     })
+    if(newSound === '/sounds/tick.wav'){
+      this.setState({sliderIcon: 'tick'})
+    }
+    if(newSound === '/sounds/monstermunch.mp3'){
+      this.setState({sliderIcon: 'monstermunch'})
+    }
+    if(newSound === '/sounds/jelly.mp3'){
+      this.setState({sliderIcon: 'jelly'})
+    }
+    if(newSound === '/sounds/dog.mp3'){
+      this.setState({sliderIcon: 'dog'})
+    }
+    if(newSound === '/sounds/meow.mp3'){
+      this.setState({sliderIcon: 'meow'})
+    }
   }
 
   loopAudio(){
@@ -72,7 +88,7 @@ class MetronomeBox extends Component{
         <button id="play-button" onClick={this.loopAudio}>▶️</button>
         <button id="hannah-button" onClick={this.clearAudio}>HANNAH!</button>
         <SoundSelector sound={this.state.sound}  onSoundSelected={this.handleSoundSelected}/>
-        <SpeedSelector speed={this.state.speed}  onSpeedSelected={this.handleSpeedSelected}/>
+        <SpeedSelector className={this.sliderIcon} sliderIcon={this.state.sliderIcon} speed={this.state.speed}  onSpeedSelected={this.handleSpeedSelected}/>
         <div id="countdown" onClick={this.playCountdown}></div>
       </section>
     )
