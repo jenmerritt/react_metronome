@@ -7,7 +7,7 @@ class MetronomeBox extends Component{
   constructor(props){
     super(props);
     this.state = {
-      speed: 1000,
+      speed: 200,
       sound: {
         title: "tick",
         audio: new Audio('/sounds/tick.wav')
@@ -17,6 +17,14 @@ class MetronomeBox extends Component{
     this.playSound = this.playSound.bind(this)
     this.loopAudio = this.loopAudio.bind(this)
     this.clearAudio = this.clearAudio.bind(this)
+    this.handleSpeedSelected = this.handleSpeedSelected.bind(this)
+
+  }
+
+  handleSpeedSelected(newSpeed){
+    this.setState({
+      speed: newSpeed
+    })
   }
 
   loopAudio(){
@@ -44,8 +52,8 @@ class MetronomeBox extends Component{
         <p>Sound: {this.state.sound.title}</p>
         <button onClick={this.loopAudio}>PLAY!</button>
         <button onClick={this.clearAudio}>HANNAH!</button>
-        <SpeedSelector speed={this.state.speed} />
-        <SoundSelector sound={this.state.sound} />
+        <SpeedSelector speed={this.state.speed}  onSpeedSelected={this.handleSpeedSelected}/>
+        <SoundSelector sound={this.state.sound}  />
       </section>
     )
   }
