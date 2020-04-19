@@ -1,4 +1,6 @@
-** Metronome **
+**Metronome**
+
+Warning: app plays sound if you load via Zeit Now link
 
 Lab completed as pair programming at CodeClan (approx. 6 hours). Using ReactJS.
 
