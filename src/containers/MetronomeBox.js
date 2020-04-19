@@ -69,7 +69,6 @@ class MetronomeBox extends Component{
   }
 
   playSound(){
-    // const audioFile = new Audio(this.state.sound)
     this.state.sound.play()
   }
 
@@ -86,7 +85,7 @@ class MetronomeBox extends Component{
         <h1>Metronome</h1>
         <p>BPM: {parseFloat(60000/this.state.speed).toFixed(0)}</p>
         <button id="play-button" onClick={this.loopAudio}>▶️</button>
-        <button id="hannah-button" onClick={this.clearAudio}>HANNAH!</button>
+        <button id="hannah-button" onClick={this.clearAudio}>Stop!</button>
         <SoundSelector sound={this.state.sound}  onSoundSelected={this.handleSoundSelected}/>
         <SpeedSelector className={this.sliderIcon} sliderIcon={this.state.sliderIcon} speed={this.state.speed}  onSpeedSelected={this.handleSpeedSelected}/>
         <div id="countdown" onClick={this.playCountdown}></div>
